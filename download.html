@@ -109,6 +109,7 @@
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 8px; padding: 10px 16px; margin-top: 24px;
     font-size: 13px; color: var(--ink-muted);
+    display: none;
   }
   .req-pill span { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-faint); }
 
@@ -162,31 +163,27 @@
     <!-- macOS state -->
     <div class="state" id="state-mac">
       <h1>Download Locus</h1>
-      <p>macOS 13 Ventura or later required. Works with Apple Silicon and Intel.</p>
+      <p>Choose how you'd like to use Locus.</p>
       <a href="https://github.com/K-man1/locus/releases/latest/download/Locus.dmg" download class="btn-download">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download .dmg
+        macOS App (.dmg)
       </a>
-      <div class="version-note" id="version-label">v1.0.0 · macOS 13+</div>
-      <div class="req-pill">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Requires Accessibility &amp; Screen Recording permissions
-        <span>—&nbsp;prompted on first launch</span>
-      </div>
+      <a href="#" class="btn-secondary">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Chrome Extension
+      </a>
+      <div class="version-note" id="version-label">The Locus App give you full control over <br> both <strong>websites and apps.</strong></div>
     </div>
 
     <!-- Not macOS state -->
     <div class="state" id="state-other">
-      <div class="state-icon">💻</div>
-      <h1>macOS only,<br>for now.</h1>
-      <p>Locus is a native macOS app. It looks like you're on a different platform — you'll need a Mac to install it.</p>
-      <div class="not-mac-box">
-        <strong>Still want to try it?</strong>
-        The interactive demo on the main page works in any browser and shows exactly how Locus works.
-      </div>
-      <a href="locus.html#features" class="btn-secondary">
-        ← Back to the site
+      <h1>Chrome Extension</h1>
+      <p>Locus is a native macOS app. It looks like you're on a different platform, but you can still install it as a chrome extension.</p>
+      <a href="_______" download class="btn-download"></a>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Chrome Extension
       </a>
+      <div class="version-note" id="version-label">The Locus App give you full control over <br> both <strong>websites and apps.</strong></div>
     </div>
 
   </div>

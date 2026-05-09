@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Locus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&family=Bricolage+Grotesque:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #E8A020;
+    --gold-light: #F5C157;
+    --gold-pale: #FDF3E0;
+    --ink: #1A1510;
+    --ink-muted: #6B5E4A;
+    --ink-faint: #C4B49A;
+    --cream: #FDFAF5;
+    --surface: #F7F2E8;
+    --border: #E8DFC8;
+    --white: #FFFFFF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 48px;
+    background: rgba(253,250,245,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px; color: var(--ink); text-decoration: none;
+  }
+
+  .nav-logo .lock-icon {
+    width: 28px; height: 28px; background: var(--gold); border-radius: 7px;
+    display: flex; align-items: center; justify-content: center; font-size: 14px;
+  }
+
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a {
+    font-size: 14px; font-weight: 400; color: var(--ink-muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 120px 24px 96px;
+  }
+
+  .page-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .page-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+
+  .page-subtitle {
+    font-size: 15px;
+    color: var(--ink-faint);
+    font-family: 'DM Mono', monospace;
+    margin-bottom: 56px;
+  }
+
+  .policy-body h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-top: 48px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .policy-body h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  .policy-body p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--ink-muted);
+    margin-bottom: 14px;
+    font-weight: 300;
+  }
+
+  .policy-body ul {
+    margin: 8px 0 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .policy-body li {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink-muted);
+    font-weight: 300;
+  }
+
+  .policy-body li strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0;
+  }
+
+  .callout p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .contact-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    margin-top: 48px;
+  }
+
+  .contact-card h2 {
+    border-bottom: none;
+    margin-top: 0;
+    font-size: 22px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  .contact-card p { margin-bottom: 6px; }
+
+  .contact-card a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .contact-card a:hover { text-decoration: underline; }
+
+  footer {
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .footer-brand { display: flex; align-items: center; gap: 10px; font-family: 'Instrument Serif', serif; font-size: 18px; color: var(--ink); }
+  .footer-brand .lock-icon { width: 26px; height: 26px; background: var(--gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+  .footer-right { display: flex; align-items: center; gap: 20px; }
+  .footer-copy { font-size: 13px; color: var(--ink-faint); font-family: 'DM Mono', monospace; }
+  .footer-link {
+    font-size: 13px; font-family: 'DM Mono', monospace; color: var(--ink-muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-link:hover { color: var(--ink); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    footer { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="lock-icon">🔒</div>
+    Locus
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#features">Features</a></li>
+    <li><a href="/#how-it-works">How It Works</a></li>
+    <li><a href="/#analytics">Analytics</a></li>
+    <li><a href="https://github.com/k-man1/locus" target="_blank">GitHub</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="page-label">Legal</div>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-subtitle">Last updated: May 9, 2026</p>
+
+  <div class="policy-body">
+
+    <p>Locus is a macOS productivity app that helps you block distracting websites and applications during focus sessions. This Privacy Policy explains what data Locus collects, how it is used, and what it shares with third parties.</p>
+
+    <div class="callout">
+      <p><strong>Short version:</strong> All focus session data (websites visited, apps used, session history, analytics) is stored <strong>locally on your device only</strong>. The only data that leaves your device is what is strictly necessary to power AI-based blocking decisions — specifically, visited URLs and page titles sent through a Cloudflare Worker proxy to Hack Club AI (via OpenRouter).</p>
+    </div>
+
+    <h2>1. Data We Collect</h2>
+
+    <p>Locus collects the following categories of data to provide its core functionality. Unless stated otherwise, all data is stored locally on your Mac and is never uploaded to Locus servers.</p>
+
+    <h3>Web History &amp; Website Content</h3>
+    <p>Locus monitors the URLs and page titles of websites you visit in your browser while a focus session is active. This is required to:</p>
+    <ul>
+      <li>Determine whether a site should be blocked or allowed based on your current task.</li>
+      <li>Detect drift — when an allowed site is being used off-task (e.g., YouTube approved for a lecture, but now playing unrelated content).</li>
+    </ul>
+    <p>URLs and page titles are processed locally and, when an AI decision is needed, forwarded through a Cloudflare Worker to Hack Club AI (see Section 3). They are never stored by Locus on any remote server.</p>
+
+    <h3>User Activity</h3>
+    <p>Locus tracks which macOS applications are running or in the foreground while a focus session is active in order to block non-allowed apps. This data is used only to enforce blocking rules and is stored locally.</p>
+
+    <h3>Session Analytics</h3>
+    <p>Locus records information about your focus sessions locally on your device, including:</p>
+    <ul>
+      <li>Session start and end times.</li>
+      <li>Number of block events and unblock requests.</li>
+      <li>Session completion status.</li>
+      <li>Per-task time totals.</li>
+    </ul>
+    <p>This data powers the in-app Analytics tab. It never leaves your device.</p>
+
+    <h3>Calendar Data (Optional)</h3>
+    <p>If you connect a calendar via an iCal URL (Google Calendar, Outlook, Schoology, Canvas, etc.), Locus reads your upcoming events to populate session task options. This data is fetched directly from your calendar provider and processed locally. Locus does not store your calendar credentials or event data remotely.</p>
+
+    <h3>Notion Data (Optional)</h3>
+    <p>If you connect Notion via OAuth, Locus reads your Notion pages and task entries to auto-populate session options. The OAuth token is stored locally on your device. Locus only reads task titles and page names — it does not write to, modify, or delete any Notion content. No Notion data is transmitted to Locus servers.</p>
+
+    <h2>2. How We Use Your Data</h2>
+
+    <p>All data collected is used exclusively for the single purpose of Locus: helping you stay focused. Specifically:</p>
+    <ul>
+      <li><strong>URL &amp; page title monitoring</strong> — to decide whether a visited site is on-task or should be blocked.</li>
+      <li><strong>App monitoring</strong> — to enforce application blocking rules during a session.</li>
+      <li><strong>Session analytics</strong> — to show you your own focus trends inside the app.</li>
+      <li><strong>Calendar &amp; Notion data</strong> — to make session setup faster by pre-filling your current tasks.</li>
+    </ul>
+
+    <p>We do not use your data for advertising, profiling, or any purpose unrelated to focus enforcement.</p>
+
+    <h2>3. Data Shared with Third Parties</h2>
+
+    <p>Locus shares data with the following third parties only when strictly necessary:</p>
+
+    <h3>Hack Club AI &amp; OpenRouter (via Cloudflare Worker)</h3>
+    <p>When Locus needs to make an AI-based decision — such as evaluating an unblock request or checking whether a page has drifted off-task — it sends the relevant URL, page title, and your current session task description to a <strong>Cloudflare Worker proxy</strong>. That Worker forwards the request to <strong>Hack Club AI</strong>, which routes it through <strong>OpenRouter</strong> to the underlying language model. The API key is stored as a Cloudflare Worker secret and is never shipped with the app or stored on your device. No personally identifiable information beyond what you type in the task description is included in these requests.</p>
+    <ul>
+      <li>Hack Club AI: <a href="https://hackclub.com/privacy/" target="_blank" rel="noopener">hackclub.com/privacy</a></li>
+      <li>OpenRouter: <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">openrouter.ai/privacy</a></li>
+    </ul>
+
+    <h3>Cloudflare</h3>
+    <p>The proxy Worker runs on Cloudflare's infrastructure. Cloudflare may log request metadata (e.g., IP address, timestamps) in accordance with their own privacy policy: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a>.</p>
+
+    <h3>Your Calendar Provider</h3>
+    <p>If you provide an iCal URL, Locus makes an outbound request to that URL to retrieve your calendar events. The request is made from your device directly to your calendar provider (Google, Microsoft, etc.).</p>
+
+    <h3>Notion</h3>
+    <p>If you connect Notion, Locus makes read-only API calls to Notion's servers using your OAuth token to retrieve task titles. This is governed by <a href="https://www.notion.so/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091" target="_blank" rel="noopener">Notion's Privacy Policy</a>.</p>
+
+    <p>We do not sell, rent, or transfer your data to any other third parties.</p>
+
+    <h2>4. Data Storage &amp; Retention</h2>
+
+    <p>All session data, analytics, configuration, and OAuth tokens are stored locally on your Mac, inside the Locus application support directory. Locus does not operate any database or cloud storage for user data. You can delete all Locus data at any time by removing the application and its support files.</p>
+
+    <h2>5. Children's Privacy</h2>
+
+    <p>Locus is designed for use by students of all ages and does not knowingly collect any data beyond what is described in this policy. No data is transmitted to Locus-operated servers at any time. Parents or guardians with questions are welcome to contact us (see Section 7).</p>
+
+    <h2>6. Changes to This Policy</h2>
+
+    <p>If this policy changes in a material way, we will update the "Last updated" date at the top of this page. Continued use of Locus after a policy change constitutes acceptance of the updated terms.</p>
+
+    <div class="contact-card">
+      <h2>7. Contact</h2>
+      <p>Locus is an open-source project built by Karman Chhatwal.</p>
+      <p>Questions about this privacy policy? Open an issue or discussion on GitHub:</p>
+      <p><a href="https://github.com/k-man1/locus" target="_blank" rel="noopener">github.com/k-man1/locus</a></p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-brand">
+    <div class="lock-icon">🔒</div>
+    Locus
+  </div>
+  <div class="footer-right">
+    <a href="/" class="footer-link">Home</a>
+    <span class="footer-copy">built by Karman Chhatwal · 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
